@@ -1,0 +1,12 @@
+# 注册中心端口
+server:
+  port: 1111
+
+# 下面两项配置表示当前 service 是一个 server 而非 client
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    # 配置自己的服务注册中心地址
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
