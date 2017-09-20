@@ -1,10 +1,8 @@
-package com.example.eureka;
+package com.example.compute;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /*
                                              __----~~~~~~~~~~~------___
@@ -32,13 +30,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 /**
  * Created by esahcorp on 2017/9/19.
  */
-@EnableEurekaServer
+@EnableDiscoveryClient
 @SpringBootApplication
-public class EurekaApplication {
+public class ComputeApplication {
 
     public static void main(String[] args) {
-//        SpringApplication.run(EurekaApplication.class, args);
-        // 添加 web 环境
-        new SpringApplicationBuilder(EurekaApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(ComputeApplication.class).web(true).run(args);
     }
 }

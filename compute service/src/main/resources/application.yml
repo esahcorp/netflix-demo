@@ -1,0 +1,12 @@
+# 服务在注册中心的 id
+spring:
+  application:
+    name: compute-service
+# 服务在主机中的端口号
+server:
+  port: 2222
+# 服务注册中心的地址，项目会按照这个地址尝试与注册中心建立心跳连接
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
