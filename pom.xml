@@ -9,7 +9,12 @@
 	<modules>
 		<module>eureka server</module>
 		<module>compute service</module>
-	</modules>
+		<module>ribbon consumer</module>
+        <module>feign consumer</module>
+		<module>config server</module>
+		<module>config client</module>
+        <module>zuul server</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>netflix-demo</name>
@@ -38,10 +43,10 @@
 			<!--<groupId>org.springframework.cloud</groupId>-->
 			<!--<artifactId>spring-cloud-config-server</artifactId>-->
 		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.cloud</groupId>-->
-			<!--<artifactId>spring-cloud-starter-eureka-server</artifactId>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+		</dependency>
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.cloud</groupId>-->
 			<!--<artifactId>spring-cloud-starter-feign</artifactId>-->
@@ -94,6 +99,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
